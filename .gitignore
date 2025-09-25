@@ -1,0 +1,16 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# IDEs and editors
+.idea/
+.vs/
+obj/
+bin/
+App_Data/
+*.DotSettings.user
+*.csproj.user
+temp/
+node_modules/
+Output/
+
+# NuGet Packages Directory
+packages
