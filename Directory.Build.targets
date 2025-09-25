@@ -1,0 +1,20 @@
+<Project>
+  <ItemGroup>
+    <!--Version for all libs-->
+    <PackageReference Include="GitInfo" Version="3.3.5" PrivateAssets="All" />
+
+    <!--Analyser-->
+    <PackageReference Include="Lindhart.Analyser.MissingAwaitWarning" Version="2.0.0" />
+
+    <!--Tests-->
+    <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.13.0" />
+    <PackageReference Update="xunit" Version="2.9.3" />
+    <PackageReference Update="xunit.runner.visualstudio" Version="3.0.2" />
+    <PackageReference Update="xunit.assert" Version="2.9.3" />
+    <PackageReference Update="xunit.extensibility.execution" Version="2.9.3" />
+    <PackageReference Update="NSubstitute" Version="5.3.0" />
+    <PackageReference Update="Shouldly" Version="4.3.0" />
+    <PackageReference Update="Shouldly" Version="4.3.0" />
+    <PackageReference Update="Faker.Net" Version="2.0.163" />
+  </ItemGroup>
+</Project>
