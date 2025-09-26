@@ -1,0 +1,35 @@
+name: Push Standards.ISO3166.CountryCodes
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      # Include for all branches and tags
+      with:
+          fetch-depth: 0
+          
+    - name: Get Git Tag
+      run: |
+        GIT_TAG=$(git describe --tags)
+        echo "GIT_TAG=$GIT_TAG" >> $GITHUB_ENV
+            
+    - name: Build
+      run: dotnet build --configuration Release
+      
+    - name: Test
+      run: dotnet test --configuration Release --no-build
+      
+    - name: Pack
+      run: dotnet pack src/Standards.ISO3166.CountryCodes/Standards.ISO3166.CountryCodes.csproj --configuration Release --no-build --output /
+      
+    - name: Push
+      run: dotnet nuget push Standards.ISO3166.CountryCodes.${GIT_TAG}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_API_KEY}
+      env:
+        NUGET_API_KEY: ${{ secrets.NUGET_ORG_STANDARDS_ISO }}
