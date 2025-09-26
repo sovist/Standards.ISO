@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Standards.ISO3166.CountryCodes
@@ -258,9 +259,9 @@ namespace Standards.ISO3166.CountryCodes
             new CountryCode("ZW", "ZWE", 716, "Zimbabwe"),
         }.AsReadOnly();
 
-        private static IReadOnlyDictionary<string, CountryCode> IndexByAlpha2 { get; } = CountryCodes.ToDictionary(_ => _.Alpha2);
+        private static IReadOnlyDictionary<string, CountryCode> IndexByAlpha2 { get; } = CountryCodes.ToDictionary(_ => _.Alpha2, StringComparer.OrdinalIgnoreCase);
 
-        private static IReadOnlyDictionary<string, CountryCode> IndexByAlpha3 { get; } = CountryCodes.ToDictionary(_ => _.Alpha3);
+        private static IReadOnlyDictionary<string, CountryCode> IndexByAlpha3 { get; } = CountryCodes.ToDictionary(_ => _.Alpha3, StringComparer.OrdinalIgnoreCase);
 
         private static IReadOnlyDictionary<int, CountryCode> IndexByNumeric { get; } = CountryCodes.ToDictionary(_ => _.Numeric);
     }

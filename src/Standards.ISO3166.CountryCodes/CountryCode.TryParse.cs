@@ -40,7 +40,7 @@ namespace Standards.ISO3166.CountryCodes
         {
             countryCode = null;
 
-            code = code?.Trim()?.ToUpperInvariant();
+            code = code?.Trim();
 
             if (string.IsNullOrEmpty(code))
             {
