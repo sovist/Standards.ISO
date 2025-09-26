@@ -6,31 +6,9 @@ using Standards.ISO3166.CountryCodes;
 
 public void Demo_1()
 {
-    //by alpha2 code
-    CountryCode.TryParse("BE", out var countryCode);
+    //by alpha2, alpha3 and numeric codes
+    var countryCode = CountryCode.GetOrDefault("BE");
 
-    //Belgium
-    Console.WriteLine(countryCode.Name);
-}
-```
-
-```
-public void Demo_2()
-{    
-    //by alpha3 code
-    CountryCode.TryParse("BEL", out var countryCode);
-    
-    //Belgium
-    Console.WriteLine(countryCode.Name);
-}
-```
-
-```
-public void Demo_3()
-{    
-    //by numeric code
-    CountryCode.TryParse("056", out var countryCode);
-    
     //Belgium
     Console.WriteLine(countryCode.Name);
 }
@@ -40,6 +18,12 @@ public void Demo_3()
 ```
 public void Demo_4()
 {    
+    //Try to parse by an alpha2, alpha3 or numeric code
+    CountryCode.TryParseA("BE", out var countryCode);
+
+    //Try to parse an alpha2 country code
+    CountryCode.TryParseAlpha2("BE", out var countryCode);
+    
     //Try to parse an alpha2 country code
     CountryCode.TryParseAlpha2("BE", out var countryCode);
     

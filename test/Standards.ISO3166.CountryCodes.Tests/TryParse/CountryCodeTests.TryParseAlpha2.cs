@@ -1,7 +1,7 @@
 using Shouldly;
 using Xunit;
 
-namespace Standards.ISO3166.CountryCodes.Tests
+namespace Standards.ISO3166.CountryCodes.Tests.TryParse
 {
     public partial class CountryCodeTests
     {

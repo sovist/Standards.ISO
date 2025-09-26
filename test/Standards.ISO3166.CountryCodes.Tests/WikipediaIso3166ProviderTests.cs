@@ -33,7 +33,7 @@ namespace Standards.ISO3166.CountryCodes.Tests
         }
 
         [Fact]
-        public async Task Load_ShouldBe_UpToDate()
+        public async Task LocalCountryCodes_ShouldMatch_WikipediaCountryCodes()
         {
             //Act
             var remoteCountryCodes = await Provider.Load();
