@@ -1,11 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	  <TargetFramework>net9.0</TargetFramework>
-	  <IsPackable>false</IsPackable>
-	  <Platforms>AnyCPU;x64</Platforms>
-	  <OutputPath>$(SolutionDir)\Output\bin\$(Configuration)\$(AssemblyName)\</OutputPath>
-	  <IntermediateOutputPath>$(SolutionDir)\Output\obj\$(Configuration)\$(AssemblyName)\</IntermediateOutputPath>
+    <TargetFramework>net9.0</TargetFramework>
+    <OutputPath>$(SolutionDir)\Output\bin\$(Configuration)\$(AssemblyName)\</OutputPath>
+    <IntermediateOutputPath>$(SolutionDir)\Output\obj\$(Configuration)\$(AssemblyName)\</IntermediateOutputPath>
   </PropertyGroup>
 
   <ItemGroup>

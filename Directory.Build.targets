@@ -3,9 +3,6 @@
     <!--Version for all libs-->
     <PackageReference Include="GitInfo" Version="3.3.5" PrivateAssets="All" />
 
-    <!--Analyser-->
-    <PackageReference Include="Lindhart.Analyser.MissingAwaitWarning" Version="2.0.0" />
-
     <!--Tests-->
     <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.13.0" />
     <PackageReference Update="xunit" Version="2.9.3" />
