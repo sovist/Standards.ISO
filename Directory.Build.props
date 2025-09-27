@@ -1,5 +1,6 @@
 <Project>
  <PropertyGroup>
    <LangVersion>13.0</LangVersion>
+   <SolutionDir Condition="'$(SolutionDir)' == ''">$(MSBuildThisFileDirectory)</SolutionDir>
  </PropertyGroup>
 </Project>

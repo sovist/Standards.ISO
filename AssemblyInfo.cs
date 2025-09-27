@@ -3,7 +3,7 @@
 [assembly: AssemblyCompany("Oleksandr Semeniuk")]
 [assembly: AssemblyCopyright("Copyright (c) 2025 Oleksandr Semeniuk")]
 
-[assembly: AssemblyMetadata("RepositoryUrl", "https://github.com/sovist/Standards.ISO")]
+[assembly: AssemblyMetadata("RepositoryUrl", ThisAssembly.Git.RepositoryUrl)]
 
 [assembly: AssemblyVersion(ThisAssembly.Git.BaseTag)]
 
