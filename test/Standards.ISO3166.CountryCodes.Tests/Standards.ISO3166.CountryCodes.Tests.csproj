@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <OutputPath>$(SolutionDir)\Output\bin\$(Configuration)\$(AssemblyName)\</OutputPath>
+    <IntermediateOutputPath>$(SolutionDir)\Output\obj\$(Configuration)\$(AssemblyName)\</IntermediateOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Shouldly" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Standards.ISO3166.CountryCodes.Providers\Standards.ISO3166.CountryCodes.Providers.csproj" />
+    <ProjectReference Include="..\..\src\Standards.ISO3166.CountryCodes\Standards.ISO3166.CountryCodes.csproj" />
+  </ItemGroup>
+
+</Project>

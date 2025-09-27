@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <OutputPath>$(SolutionDir)\Output\bin\$(Configuration)\$(AssemblyName)\</OutputPath>
+    <IntermediateOutputPath>$(SolutionDir)\Output\obj\$(Configuration)\$(AssemblyName)\</IntermediateOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\AssemblyInfo.cs" Link="AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" Version="1.12.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Standards.ISO3166.CountryCodes\Standards.ISO3166.CountryCodes.csproj" />
+  </ItemGroup>
+
+</Project>

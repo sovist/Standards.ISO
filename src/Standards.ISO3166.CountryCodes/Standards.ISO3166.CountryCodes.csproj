@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <OutputPath>$(SolutionDir)\Output\bin\$(Configuration)\$(AssemblyName)\</OutputPath>
+    <IntermediateOutputPath>$(SolutionDir)\Output\obj\$(Configuration)\$(AssemblyName)\</IntermediateOutputPath>
+
+    <IsPackable>true</IsPackable>
+    <Title>$(AssemblyName)</Title>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageTags>iso;iso-3166;country-codes;.net-standard-2.0;</PackageTags>
+    <RepositoryUrl>https://github.com/sovist/Standards.ISO</RepositoryUrl>
+    <Company>Oleksandr Semeniuk</Company>
+    <Authors>Oleksandr Semeniuk</Authors>
+    <Copyright>Copyright (c) 2025 Oleksandr Semeniuk</Copyright>
+    <Description>Support for ISO-3166 country codes in .NET</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\AssemblyInfo.cs" Link="AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
