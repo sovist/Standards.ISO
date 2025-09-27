@@ -17,6 +17,7 @@
     <Company>Oleksandr Semeniuk</Company>
     <Authors>Oleksandr Semeniuk</Authors>
     <Copyright>Copyright (c) 2025 Oleksandr Semeniuk</Copyright>
+    <Description>Support for ISO-3166 country codes in .NET</Description>
   </PropertyGroup>
 
   <ItemGroup>
