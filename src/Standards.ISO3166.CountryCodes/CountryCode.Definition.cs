@@ -162,7 +162,7 @@ namespace Standards.ISO3166.CountryCodes
             new CountryCode("MZ", "MOZ", 508, "Mozambique"),
             new CountryCode("MM", "MMR", 104, "Myanmar"),
             new CountryCode("NA", "NAM", 516, "Namibia"),
-            new CountryCode("NR", "NRU", 520, "Nauru"),
+            new CountryCode("NR", "NRU", 520, "Naoero"),
             new CountryCode("NP", "NPL", 524, "Nepal"),
             new CountryCode("NL", "NLD", 528, "Netherlands, Kingdom of the"),
             new CountryCode("NC", "NCL", 540, "New Caledonia"),
