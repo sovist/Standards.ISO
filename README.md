@@ -1,5 +1,10 @@
 # Standards.ISO
 
+[![NuGet](https://img.shields.io/nuget/v/Standards.ISO3166.CountryCodes.svg)](https://www.nuget.org/packages/Standards.ISO3166.CountryCodes)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/Standards.ISO3166.CountryCodes.svg)](https://www.nuget.org/packages/Standards.ISO3166.CountryCodes)
+[![Build & Tests](https://github.com/sovist/Standards.ISO/actions/workflows/dotnet.yml/badge.svg)](https://github.com/sovist/Standards.ISO/actions/workflows/dotnet.yml)
+[![License: MIT](https://img.shields.io/github/license/sovist/Standards.ISO)](https://github.com/sovist/Standards.ISO/blob/master/LICENSE)
+
 ### How to use
 ```
 using Standards.ISO3166.CountryCodes;
