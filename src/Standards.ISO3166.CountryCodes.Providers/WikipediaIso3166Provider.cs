@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -51,9 +52,14 @@ namespace Standards.ISO3166.CountryCodes.Providers
 
                 htmlDocument.LoadHtml(page);
 
+                //Match class names individually, so additional classes added by Wikipedia don't break the lookup
                 var table = htmlDocument.DocumentNode
-                    .SelectNodes(".//table[@class='wikitable sortable sticky-header'] //tbody")
-                    .Single();
+                    .SelectNodes(".//table" +
+                                 "[contains(concat(' ', normalize-space(@class), ' '), ' wikitable ')]" +
+                                 "[contains(concat(' ', normalize-space(@class), ' '), ' sticky-header ')]" +
+                                 "//tbody")
+                    ?.Single()
+                    ?? throw new InvalidOperationException("ISO 3166-1 codes table was not found on the Wikipedia page.");
 
                 return table
                     .SelectNodes(".//tr")
